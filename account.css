@@ -1,0 +1,558 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Layout */
+.AllInfoDiv {
+    display: flex;
+}
+
+#userNavigatioMenuMainDiv {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: auto;
+    background-color: #007aff;
+    padding: 20px;
+}
+
+#rightContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5vw;
+    max-height: fit-content;
+    width: 80vw;
+}
+
+/* Logo Section */
+#logoDiv {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 30px;
+    text-align: center;
+    width: 100%;
+}
+
+#logoDiv a {
+    text-decoration: none;
+}
+
+#logoDiv a h1 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* Navigation Buttons */
+#navigationButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+#navigationButtons button {
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+    transition: all 0.3s;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+#navigationButtons button.active {
+    background-color: hsl(211, 100%, 30%);
+}
+
+#navigationButtons button:hover {
+    background-color: hsl(211, 100%, 40%);
+}
+
+#navigationButtons button h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 10px;
+    color: white;
+}
+
+.selectionLabel {
+    color: #ffffffad;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 20px 0 15px;
+}
+
+/* User Name Display */
+#userNameDiv {
+    width: 95%;
+}
+
+#h3Name {
+    color: #aaa;
+    margin: 30px 0 20px;
+    text-align: right;
+}
+
+/* Transactions Page */
+#transactionsPage {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    height: auto;
+}
+
+.input-section label {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.input-section input[type="number"],
+.input-section input[type="date"]{
+    font-size: 1rem;
+    outline: none;
+    padding: 5px;
+    transition: width 0.8s ease;
+    margin: 0 10px;
+}
+
+.input-section input[type="date"] {
+    cursor: pointer;
+}
+
+.input-section button {
+    border: none;
+    cursor: pointer;
+}
+
+#categorySelect {
+    cursor: pointer;
+    padding: 5px;
+    transition: width 0.8s ease;
+    margin: 0 10px;
+}
+
+.addExpenseBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 46px;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s;
+    background-image: linear-gradient(133deg, rgba(23, 103, 210, 1) 23%, rgba(187, 189, 225, 1) 87%), linear-gradient(82deg, rgba(23, 103, 210, 1) 23%, rgba(187, 189, 225, 1) 87%);
+}
+
+.addExpenseBtn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Cards Section */
+#card {
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    height: 5vh;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 30px 10px;
+    text-align: center;
+    transition: all 0.3s;
+    width: 12vw;
+}
+
+#card h3 {
+    color: hsl(0, 0%, 64%);
+    font-size: 0.8rem;
+    font-weight: 400;
+    user-select: none;
+}
+
+#card p {
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+#card button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+#card button:hover {
+    opacity: 0.8;
+}
+
+/* Info Section */
+.infoDiv {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+#incomeInput {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Display Data Section */
+.displayDataDiv {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.expenses-list {
+    box-sizing: border-box;
+    flex: 1;
+    max-width: 90%;
+    margin-right: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    height: 100%;
+    width: 100%;
+}
+
+th {
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+#expensesTableBody tr {
+    height: 50px;
+}
+
+/* Modals and Overlays */
+.modal {
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0; /* Corrected from 'top: 45;' */
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000; /* Ensure it overlays other content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    overflow: auto; /* Enable scrolling if content overflows */
+    flex-direction: column; /* Optional: if you have multiple items to stack vertically */
+}
+
+.modal-content {
+    background-color: #fff;
+    border: 1px solid #888;
+    margin: 15% auto;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; /* Add this */
+    bottom: 0; /* And this */
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: auto;
+    flex-direction: column;
+}
+
+#newCategoryDiv {
+    background-color: #fff;
+    border: 1px solid #888;
+    margin: 15% auto;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+/* Buttons */
+.delete-btn {
+    background-color: #f44336;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.deleteBtn {
+    background-color: rgb(218, 83, 59);
+    border: none;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px;
+    color: white;
+}
+
+.deleteBtn:hover {
+    opacity: 0.8;
+}
+
+.save-btn {
+    background-color: #000000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.close {
+    color: #aaa;
+    cursor: pointer;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 90%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Dashboard */
+#dashboardDiv {
+    justify-content: center;
+    align-self: center;
+    width: 25vw;
+    height: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    grid-template-rows: 0.5fr 0.5fr; /* Ensures two rows */
+    gap: 150px; /* Adds space between the items */
+}
+
+.charts {
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-family: sans-serif;
+    width: 100%; /* Makes the canvas occupy full grid cell width */
+    height: 100%; /* Makes the canvas occupy full grid cell height */
+}
+
+/* Responsive Styles */
+@media (max-width: 928px) {
+    #card {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 14vh;
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    #logoDiv {
+        display: flex;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        padding-left: 0px;
+    }
+
+    #logoDiv a h1 {
+        display: none;
+    }
+
+    #navigationButtons {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #navigationButtons button {
+        justify-content: center;
+        margin: 10px 0;
+        width: 9%;
+    }
+
+    #navigationButtons button h2 {
+        display: none;
+    }
+
+    #navigationButtons button i {
+        margin: 10px;
+    }
+
+    .infoDiv {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .input-section {
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        color: #000;
+        padding: 0;
+    }
+
+    .input-section div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        width: 70vw;
+    }
+
+    .input-section input[type="number"],
+    .input-section input[type="date"],
+    #categorySelect {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        width: 70vw;
+    }
+
+    .displayDataDiv {
+        flex-direction: column;
+    }
+
+    .expenses-list {
+        margin: 20px;
+        margin-bottom: 60px;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        min-width: 600px; /* Adjust based on your table's content */
+    }
+
+    th, td {
+        white-space: nowrap;
+    }
+
+    .selectionLabel {
+        display: none;
+    }
+
+    #dashboardDiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+    }
+
+    #userNavigatioMenuMainDiv {
+        max-width: 15vw;
+    }
+
+    #rightContent {
+        margin: 1px;
+    }
+
+    /* Responsive Modals */
+    .modal-content,
+    #newCategoryDiv {
+        width: 90%; /* Increase width to utilize more screen space */
+        margin: 20% auto; /* Adjust margin for better vertical alignment */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .close {
+        font-size: 24px; /* Adjust close button size */
+        margin-left: 85%; /* Reposition close button */
+    }
+
+    /* Adjust input fields and buttons within modals */
+    .modal-content input,
+    #newCategoryDiv input {
+        width: 100%; /* Full width inputs */
+        font-size: 1rem; /* Adjust font size for readability */
+    }
+
+    .modal-content button,
+    #newCategoryDiv button {
+        width: 100%; /* Full width buttons */
+        padding: 10px; /* Adjust padding for touch devices */
+        font-size: 1rem;
+    }
+}
